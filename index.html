@@ -205,20 +205,13 @@ button {
     </div>
 </div>
 
+<button onclick="document.getElementById('bgmusic').play()">
+🎵 Tap here for music
+</button>
+
 <audio id="bgmusic" loop>
     <source src="bgmusic.mp3" type="audio/mpeg">
 </audio>
-
-<script>
-function playMusicOnce() {
-    const music = document.getElementById("bgmusic");
-    music.play().catch(() => {});
-    document.removeEventListener("click", playMusicOnce);
-}
-
-document.addEventListener("click", playMusicOnce);
-document.addEventListener("touchstart", playMusicOnce);
-</script>
 
 
 <!-- 🌑 MODAL -->
