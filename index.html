@@ -210,16 +210,18 @@ button {
 </audio>
 
 <script>
-function startMusic() {
+function enableMusic() {
     const music = document.getElementById("bgmusic");
     music.play().catch(() => {});
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
+    
+    // remove after first trigger
+    document.removeEventListener("click", enableMusic);
+    document.removeEventListener("touchstart", enableMusic);
 }
 
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
-</script>    
+document.addEventListener("click", enableMusic);
+document.addEventListener("touchstart", enableMusic);
+</script>  
 
 <!-- 🌑 MODAL -->
 <div class="modal" id="modal" onclick="closeImg()">
