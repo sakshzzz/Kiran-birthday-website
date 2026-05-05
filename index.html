@@ -139,7 +139,7 @@ button {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     h2 {
@@ -155,18 +155,25 @@ button {
     .love-note, .final-note {
         font-size: 16px;
         padding: 0 15px;
-    }
-}
-@media (max-width: 768px) {
-    .reel {
-        animation: scroll 25s linear infinite;
+        line-height: 1.5;
     }
 
+    /* make images not get clipped on mobile */
     .slide {
-        width: 200px;
-        height: 320px;
+        width: 220px;
+        height: 360px;
+    }
+
+    .slide img {
+        object-fit: contain;
+    }
+
+    /* prevent horizontal clipping issues */
+    .reel-wrapper {
+        overflow-x: hidden;
     }
 }
+    
 </style>
 </head>
 
@@ -176,7 +183,7 @@ button {
 <h2>To the Sunshine of my life ( MY KIRAN )</h2>
 
 <!-- 💌 LOVE NOTE -->
-<button onclick="showLove()">Click for something I wanted to say 💌</button>
+<button onclick="showLove()">Click here I have something I wanna say 💌</button>
 
 <div class="love-note" id="loveNote">
     I still remember the day I first saw you, you were right in front of me talking to me with a fake accent, it was that moment when i found you cute and funny and your silly talks, the way you laugh everything made me fall for you even harder. <br><br>
@@ -190,8 +197,9 @@ button {
 <button onclick="showFinal()">One last thing…</button>
 
 <div class="final-note" id="finalNote">
-    I just wanted you to know-  
-    I still appreciate us and I hope we can be as we used to. ❤️ <br><br>
+    Firstly, Sending you lots of love, hugs and kisses on your day.<br><br>
+    And Secondly, I just wanted you to know-  
+    I still appreciate us and I hope we can be as we used to. ❤️ 
 
     And if life gives us another chance  
     to create something new…  
